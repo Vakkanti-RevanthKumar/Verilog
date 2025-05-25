@@ -32,14 +32,16 @@ module siso_tb(
     always #10 clk=~clk;
     initial begin
     
-    rst=0; din=0;
+    $monitor("Time = %0t | rst = %b | din = %b | out = %b |", $time, rst, din, out);
     
-    #100 rst=1; din=1;
-    #10 rst=0; din=0;
-    #100 rst=1; din=0;
-    #10 din=1;
+            rst = 1;
+            
+            #10 rst = 0; din = 1; 
+            
+            #10 din = 0; 
+            #10 din = 1;
+            #10 din = 0;
     
-    
-    #200 $finish;
+            #100 $finish;
     end
 endmodule
