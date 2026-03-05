@@ -10,11 +10,12 @@ always @(*) begin
     
     for(i = 0; i < 8; i = i + 1) begin
     
-        if(data_in[i] == 1'b0)
+        if(data_in[i] == 1'b1)
         
             count = count + 1;
             
     end
 end
+
 
 endmodule
