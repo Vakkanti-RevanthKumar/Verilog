@@ -1,6 +1,6 @@
 module count_ones (
     input  [7:0] data_in,     // 8-bit input
-    output reg [3:0] count    // maximum 8 ones -> needs 4 bits
+    output reg [3:0] count    
 );
 
 integer i;
@@ -16,5 +16,6 @@ always @(*) begin
             
     end
 end
+
 
 endmodule
